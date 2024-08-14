@@ -77,7 +77,7 @@ local Distance = 10
 local Character = character
 -- Initialize the global prediction value
 getgenv().VoidxSilent = getgenv().VoidxSilent or {}
-getgenv().VoidxSilent.Prediction = 0.11456  -- Set the original prediction value
+getgenv().VoidxSilent.Prediction = 0.25 -- Set the original prediction value
 
 -- Function to get the closest hit point, always returning the HumanoidRootPart
 local function GetClosestHitPoint(targetModel)
