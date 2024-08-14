@@ -77,7 +77,7 @@ local Distance = 10
 local Character = character
 -- Initialize the global prediction value
 getgenv().VoidxSilent = getgenv().VoidxSilent or {}
-getgenv().VoidxSilent.Prediction = 0.225 -- Set the original prediction value
+getgenv().VoidxSilent.Prediction = 0.235 -- Set the original prediction value
 
 -- Function to get the closest hit point, always returning the HumanoidRootPart
 local function GetClosestHitPoint(targetModel)
@@ -158,7 +158,7 @@ end)
 
 game:GetService("RunService").RenderStepped:Connect(function()
 if attack then
-local Part = target.Character.PrimaryPart
+local Part = target.Character.Head
     noclipactive()
     shoot()
     Reload()
@@ -167,7 +167,7 @@ local Part = target.Character.PrimaryPart
     local v = GetVelocity(target, s.Name)
    game.ReplicatedStorage.MainEvent:FireServer("UpdateMousePosI",t+v*getgenv().VoidxSilent.Prediction)
 
-    SineX, SineZ = SineX + 0.05, SineZ + 0.05
+    SineX, SineZ = SineX + 1, SineZ + 1
 		local SinX, SinZ = math.sin(SineX), math.sin(SineZ)
 		if HumanoidRootPart and character and target.Character then
 			HumanoidRootPart.Velocity = Vector3.new(0, 0, 0)
