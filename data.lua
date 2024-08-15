@@ -1,5 +1,6 @@
 -- queueteleport = (syn and syn.queue_on_teleport) or queue_on_teleport or (fluxus and fluxus.queue_on_teleport)
 print("working")
+local test,ing = pcall(function()
 local function waitForDisconnect(connection)
     return coroutine.wrap(function()
         while connection.Connected do
@@ -261,3 +262,5 @@ while nigga do
     end
     wait(5)
 end
+end)
+if ing then print(ing) end
