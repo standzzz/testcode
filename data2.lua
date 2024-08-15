@@ -184,7 +184,7 @@ function attack(target)
                 end)
                 if database then
                     local found = false
-                    for i,v in pairs(database) then
+                    for i,v in pairs(database) do
                         if i == tostring(target.UserId) then
                             found = true
                         end
